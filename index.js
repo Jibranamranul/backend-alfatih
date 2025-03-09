@@ -7,10 +7,14 @@ const bodyparser = require("body-parser")
 
 app.use(bodyparser.json())
 
-app.get('/', routes)
 
+app.get('/news', routes)
 
+app.post('/news/post', routes)
 
+app.delete('/news/delete', routes)
+
+app.get('/image', routes)
 
 
 app.listen(port, function(err){
